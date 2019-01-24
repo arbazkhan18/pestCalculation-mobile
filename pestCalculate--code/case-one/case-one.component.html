@@ -1,0 +1,24 @@
+<div class="example-container">
+  <h2 style="font-family: 'Kanit', sans-serif;" > Gram a.i. per hectare </h2>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Recommended gm a.i. per hectare" type="number" [(ngModel)]="input1" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Concentration of a.i. in the product" type="number" [(ngModel)]="input2" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Area (in hectares)" type="number" [(ngModel)]="input3" >
+  </mat-form-field>
+
+  <button mat-raised-button  [disabled]="!(input1 && input2 && input3)" (click)="calculate()">Calculate</button>
+
+</div>
+
+<div style="padding-top: 20px;">
+  <!-- <button mat-raised-button color="accent" (click)= expand()> <i class="material-icons"> keyboard_arrow_down </i>View Result</button> -->
+  <h2 style="font-family: 'Kanit', sans-serif;" *ngIf="isCollapse"> Result: <span style="color:darkgreen;">{{result}}</span>ml or gram of chemical</h2>
+
+  <div>

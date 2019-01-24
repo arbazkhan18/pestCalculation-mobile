@@ -1,0 +1,22 @@
+<div class="example-container">
+  <!-- <mat-card>
+      <mat-card-content> -->
+  <h2 style="text-align: center; font-family: 'Kanit', sans-serif;"> Gram/litre of water</h2>
+  <mat-form-field style="padding-top: 1.5rem;">
+    <input matInput placeholder="Recommended dosage (gm/litre of water)" type="number" [(ngModel)]="input1">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Litres of water required" type="number" [(ngModel)]="input2">
+  </mat-form-field>
+
+  <button mat-raised-button [disabled]="!(input1 && input2)" (click)="calculate()">Calculate</button>
+  <!-- </mat-card-content>
+  
+    </mat-card> -->
+  <br>
+  <div style="padding-top: 20px;">
+    <h2 style="font-family: 'Kanit', sans-serif;" *ngIf="isCollapse"> Result:
+      <span style="color:darkgreen;">{{result}}</span> gm of chemical</h2>
+  </div>
+</div>
